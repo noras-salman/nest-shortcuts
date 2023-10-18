@@ -53,7 +53,7 @@ then
 fi
  
 PS3="[*] Select Database (Enter a number): "
-db_type="'mysql'"
+db_type="mysql"
 db_package='mysql2'
 db_port=3306
 db_pass="proccess.env.MYSQL_ROOT_PASSWORD"
@@ -67,7 +67,7 @@ do
             break;;
         PostgreSQL)
             echo "Selected database: $database"
-            db_type="'postgres'"
+            db_type="postgres"
             db_package='pg'
             db_port=5432
             db_pass="proccess.env.POSTGRES_PASSWORD"
@@ -155,8 +155,8 @@ import { DataSource } from 'typeorm';
 export class AppModule {
   constructor(@InjectDataSource() private dataSource: DataSource) {}
   async onModuleInit() {
-    const sql_clean = ``;
-    const sql = ``;
+    const sql_clean = '';
+    const sql = '';
     for (const statement of sql_clean.split(';')) {
       try {
         if (statement.trim() !== '') await this.dataSource.query(statement);
