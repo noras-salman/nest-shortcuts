@@ -56,9 +56,9 @@ PS3="[*] Select Database (Enter a number): "
 db_type="mysql"
 db_package='mysql2'
 db_port=3306
-db_pass="proccess.env.MYSQL_ROOT_PASSWORD"
+db_pass="process.env.MYSQL_ROOT_PASSWORD"
 db_user="'root'"
-db_name="proccess.env.MYSQL_DATABASE"
+db_name="process.env.MYSQL_DATABASE"
 select database in MySQL PostgreSQL
 do
     case $database in
@@ -70,9 +70,9 @@ do
             db_type="postgres"
             db_package='pg'
             db_port=5432
-            db_pass="proccess.env.POSTGRES_PASSWORD"
-            db_name="proccess.env.POSTGRES_DB"
-            db_user="proccess.env.POSTGRES_USER"
+            db_pass="process.env.POSTGRES_PASSWORD"
+            db_name="process.env.POSTGRES_DB"
+            db_user="process.env.POSTGRES_USER"
             break;;
         *) 
             echo "Invalid option $REPLY";
