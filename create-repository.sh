@@ -46,6 +46,7 @@ import { $REPOSITORY } from './$service_name.repository';
 @Module({
   controllers: [$CONTROLLER],
   providers: [$SERVICE,$REPOSITORY],
+  exports: [$SERVICE],
 })
 export class $MODULE {}
 ">src/$service_name/$service_name.module.ts
